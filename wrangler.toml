@@ -1,22 +1,22 @@
 name = "tiktok-downloader"
-main = "app/api/process/route.ts"
-compatibility_date = "2023-05-18"
-
-[vars]
-ENVIRONMENT = "production"
-
-[site]
-bucket = "./public"
 
 [build]
 command = "npm run build"
-[build.upload]
-format = "service-worker"
+[build.environment]
+NODE_VERSION = "18"
+
+[site]
+bucket = ".next"
+
+[env.production]
+pages_build_output_dir = ".next"
+vars = { ENVIRONMENT = "production" }
 
 [env.staging]
-name = "tiktok-downloader-staging"
+pages_build_output_dir = ".next"
 vars = { ENVIRONMENT = "staging" }
 
 [env.development]
-name = "tiktok-downloader-dev"
+pages_build_output_dir = ".next"
 vars = { ENVIRONMENT = "development" }
+

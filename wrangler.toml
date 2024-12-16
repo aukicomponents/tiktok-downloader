@@ -1,4 +1,4 @@
-name = "tiktok-downloader"
+name = "my-v0-project"
 
 [build]
 command = "npm run build"

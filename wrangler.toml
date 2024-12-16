@@ -1,0 +1,22 @@
+name = "tiktok-downloader"
+main = "app/api/process/route.ts"
+compatibility_date = "2023-05-18"
+
+[vars]
+ENVIRONMENT = "production"
+
+[site]
+bucket = "./public"
+
+[build]
+command = "npm run build"
+[build.upload]
+format = "service-worker"
+
+[env.staging]
+name = "tiktok-downloader-staging"
+vars = { ENVIRONMENT = "staging" }
+
+[env.development]
+name = "tiktok-downloader-dev"
+vars = { ENVIRONMENT = "development" }

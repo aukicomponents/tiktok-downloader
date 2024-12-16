@@ -20,6 +20,6 @@ bun run build
 git clone https://github.com/aukicomponents/tiktok-downloader
 ```
 
-## Instant Deployment
+## Deploy with Vercel
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?s=https%3A%2F%2Fgithub.com%2Faukicomponents%2Ftiktok-downloader)
 

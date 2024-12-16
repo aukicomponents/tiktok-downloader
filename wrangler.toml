@@ -8,15 +8,8 @@ NODE_VERSION = "18"
 [site]
 bucket = ".next"
 
-[env.production]
-pages_build_output_dir = ".next"
-vars = { ENVIRONMENT = "production" }
-
-[env.staging]
-pages_build_output_dir = ".next"
-vars = { ENVIRONMENT = "staging" }
-
-[env.development]
-pages_build_output_dir = ".next"
-vars = { ENVIRONMENT = "development" }
-
+[pages]
+  [pages.environment]
+    production = { pages_build_output_dir = ".next", vars = { ENVIRONMENT = "production" } }
+    staging = { pages_build_output_dir = ".next", vars = { ENVIRONMENT = "staging" } }
+    development = { pages_build_output_dir = ".next", vars = { ENVIRONMENT = "development" } }
